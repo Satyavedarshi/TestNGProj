@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-25T15:30:41 IST" name="SmokeSuite" finished-at="2023-12-25T15:30:41 IST" duration-ms="68">
+  <suite started-at="2023-12-25T16:03:21 IST" name="SmokeSuite" finished-at="2023-12-25T16:03:21 IST" duration-ms="29">
     <groups>
       <group name="Smoke">
-        <method signature="day4.loginmobile(java.lang.String)[pri:0, instance:test.day4@7a69b07]" name="loginmobile" class="test.day4"/>
-        <method signature="day3.login1(java.lang.String)[pri:0, instance:test.day3@3bb9a3ff]" name="login1" class="test.day3"/>
-        <method signature="day3.login3()[pri:0, instance:test.day3@3bb9a3ff]" name="login3" class="test.day3"/>
+        <method signature="day4.loginphone()[pri:0, instance:test.day4@3f197a46]" name="loginphone" class="test.day4"/>
+        <method signature="day4.loginmobile(java.lang.String)[pri:0, instance:test.day4@3f197a46]" name="loginmobile" class="test.day4"/>
+        <method signature="day3.login1(java.lang.String)[pri:0, instance:test.day3@a514af7]" name="login1" class="test.day3"/>
+        <method signature="day3.login3()[pri:0, instance:test.day3@a514af7]" name="login3" class="test.day3"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2023-12-25T15:30:41 IST" name="SmokeTests" finished-at="2023-12-25T15:30:41 IST" duration-ms="24">
+    <test started-at="2023-12-25T16:03:21 IST" name="SmokeTests" finished-at="2023-12-25T16:03:21 IST" duration-ms="27">
       <class name="test.day4">
-        <test-method signature="loginmobile(java.lang.String)[pri:0, instance:test.day4@7a69b07]" started-at="2023-12-25T15:30:41 IST" name="loginmobile" finished-at="2023-12-25T15:30:41 IST" duration-ms="4" status="PASS">
+        <test-method signature="loginphone()[pri:0, instance:test.day4@3f197a46]" started-at="2023-12-25T16:03:21 IST" name="loginphone" finished-at="2023-12-25T16:03:21 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginphone -->
+        <test-method signature="loginmobile(java.lang.String)[pri:0, instance:test.day4@3f197a46]" started-at="2023-12-25T16:03:21 IST" name="loginmobile" finished-at="2023-12-25T16:03:21 IST" depends-on-methods="test.day4.loginphone" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,9 +30,9 @@
         </test-method> <!-- loginmobile -->
       </class> <!-- test.day4 -->
     </test> <!-- SmokeTests -->
-    <test started-at="2023-12-25T15:30:41 IST" name="Test2" finished-at="2023-12-25T15:30:41 IST" duration-ms="7">
+    <test started-at="2023-12-25T16:03:21 IST" name="Test2" finished-at="2023-12-25T16:03:21 IST" duration-ms="29">
       <class name="test.day3">
-        <test-method signature="login1(java.lang.String)[pri:0, instance:test.day3@3bb9a3ff]" started-at="2023-12-25T15:30:41 IST" name="login1" finished-at="2023-12-25T15:30:41 IST" duration-ms="1" status="PASS">
+        <test-method signature="login1(java.lang.String)[pri:0, instance:test.day3@a514af7]" started-at="2023-12-25T16:03:21 IST" name="login1" finished-at="2023-12-25T16:03:21 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -38,7 +43,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login1 -->
-        <test-method signature="login2(java.lang.String,java.lang.String)[pri:0, instance:test.day3@3bb9a3ff]" started-at="2023-12-25T15:30:41 IST" name="login2" data-provider="getData" finished-at="2023-12-25T15:30:41 IST" duration-ms="1" status="PASS">
+        <test-method signature="login2(java.lang.String,java.lang.String)[pri:0, instance:test.day3@a514af7]" started-at="2023-12-25T16:03:21 IST" name="login2" data-provider="getData" finished-at="2023-12-25T16:03:21 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -54,7 +59,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login2 -->
-        <test-method signature="login2(java.lang.String,java.lang.String)[pri:0, instance:test.day3@3bb9a3ff]" started-at="2023-12-25T15:30:41 IST" name="login2" data-provider="getData" finished-at="2023-12-25T15:30:41 IST" duration-ms="1" status="PASS">
+        <test-method signature="login2(java.lang.String,java.lang.String)[pri:0, instance:test.day3@a514af7]" started-at="2023-12-25T16:03:21 IST" name="login2" data-provider="getData" finished-at="2023-12-25T16:03:21 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -70,7 +75,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login2 -->
-        <test-method signature="login2(java.lang.String,java.lang.String)[pri:0, instance:test.day3@3bb9a3ff]" started-at="2023-12-25T15:30:41 IST" name="login2" data-provider="getData" finished-at="2023-12-25T15:30:41 IST" duration-ms="1" status="PASS">
+        <test-method signature="login2(java.lang.String,java.lang.String)[pri:0, instance:test.day3@a514af7]" started-at="2023-12-25T16:03:21 IST" name="login2" data-provider="getData" finished-at="2023-12-25T16:03:21 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -86,7 +91,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login2 -->
-        <test-method signature="login3()[pri:0, instance:test.day3@3bb9a3ff]" started-at="2023-12-25T15:30:41 IST" name="login3" finished-at="2023-12-25T15:30:41 IST" duration-ms="1" status="PASS">
+        <test-method signature="login3()[pri:0, instance:test.day3@a514af7]" started-at="2023-12-25T16:03:21 IST" name="login3" finished-at="2023-12-25T16:03:21 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login3 -->

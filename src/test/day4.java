@@ -1,16 +1,18 @@
 package test;
 
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class day4 {
 	@Parameters({"URL"})
-	@Test(groups= {"Smoke"})
+	@Test(groups= {"Smoke"},dependsOnMethods= {"loginphone"})
 	public void loginmobile(String urlname){
 		System.out.println("Login-4 fopr URL - " +urlname);
+		Assert.assertTrue(true);
 	}
 	
-	@Test
+	@Test(groups= {"Smoke"})
 	public void loginphone(){
 		System.out.println("Login-5");
 	}

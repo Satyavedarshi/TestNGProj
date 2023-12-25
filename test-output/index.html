@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">7 methods,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,12 +108,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeSuite" title="test.day3" class="method navigator-link" hash-for-method="login2(username3, password3)">login2(username3, password3)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-SmokeSuite" title="test.day3" class="method navigator-link" hash-for-method="login2(username2, password2)">login2(username2, password2)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeSuite" title="test.day3" class="method navigator-link" hash-for-method="login2(username2, password2)">login2(username2, password2)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-SmokeSuite" title="test.day3" class="method navigator-link" hash-for-method="login2(username3, password3)">login2(username3, password3)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -129,6 +129,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-SmokeSuite" title="test.day4" class="method navigator-link" hash-for-method="loginmobile(qaclickacademy.com)">loginmobile(qaclickacademy.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SmokeSuite" title="test.day4" class="method navigator-link" hash-for-method="loginphone">loginphone</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-SmokeSuite -->
@@ -159,18 +164,18 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="login2(username3, password3)">
-                  </a> <!-- login2(username3, password3) -->
-                  <span class="method-name">login2</span>
-                  <span class="parameters">(username3,password3)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="login2(username2, password2)">
                   </a> <!-- login2(username2, password2) -->
                   <span class="method-name">login2</span>
                   <span class="parameters">(username2,password2)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="login2(username3, password3)">
+                  </a> <!-- login2(username3, password3) -->
+                  <span class="method-name">login2</span>
+                  <span class="parameters">(username3,password3)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -204,6 +209,13 @@
                   <span class="parameters">(qaclickacademy.com)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginphone">
+                  </a> <!-- loginphone -->
+                  <span class="method-name">loginphone</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-SmokeSuite-class-passed -->
         </div> <!-- panel SmokeSuite -->
@@ -215,11 +227,11 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;SmokeSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;SmokeSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;test.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;SmokeTests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;classes&quot; name=&quot;SmokeTests&quot;&gt;
     &lt;parameter name=&quot;URL&quot; value=&quot;qaclickacademy.com&quot;/&gt;
     &lt;groups&gt;
       &lt;run&gt;
@@ -232,7 +244,7 @@
       &lt;class name=&quot;test.day4&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- SmokeTests --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test2&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test2&quot;&gt;
     &lt;parameter name=&quot;URL&quot; value=&quot;google.com&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test.day3&quot;/&gt;
@@ -277,6 +289,10 @@
                 <span class="method-in-group-name">loginmobile</span>
                 <br/>
               </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginphone</span>
+                <br/>
+              </div> <!-- method-in-group -->
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -294,36 +310,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginmobile')
+data.setCell(0, 1, 'loginphone')
 data.setCell(0, 2, 'test.day4')
-data.setCell(0, 3, 4);
+data.setCell(0, 3, 3);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login2')
+data.setCell(1, 1, 'login1')
 data.setCell(1, 2, 'test.day3')
-data.setCell(1, 3, 1);
+data.setCell(1, 3, 3);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'login1')
-data.setCell(2, 2, 'test.day3')
+data.setCell(2, 1, 'loginmobile')
+data.setCell(2, 2, 'test.day4')
 data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'login3')
+data.setCell(3, 1, 'login2')
 data.setCell(3, 2, 'test.day3')
 data.setCell(3, 3, 1);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'login2')
 data.setCell(4, 2, 'test.day3')
-data.setCell(4, 3, 1);
+data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'login2')
+data.setCell(5, 1, 'login3')
 data.setCell(5, 2, 'test.day3')
-data.setCell(5, 3, 1);
+data.setCell(5, 3, 0);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'login2')
+data.setCell(6, 2, 'test.day3')
+data.setCell(6, 3, 0);
 window.suiteTableData['SmokeSuite']= { tableData: data, tableDiv: 'times-div-SmokeSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 ms</span>
+              <span class="suite-total-time">Total running time: 29 ms</span>
               <div id="times-div-SmokeSuite">
               </div> <!-- times-div-SmokeSuite -->
             </div> <!-- times-div -->
@@ -338,7 +358,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-SmokeSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -360,8 +380,6 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">APIlogin</span>
                 <br/>
-                <span class="ignored-method-name">loginphone</span>
-                <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -374,7 +392,7 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">test.day4</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">loginmobile(qaclickacademy.com)</span>
+                <span class="method-name">loginphone</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
@@ -382,23 +400,33 @@ return data;
               <div class="chronological-class-name">test.day3</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">login1(google.com)</span>
-                <span class="method-start">44 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">test.day4</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginmobile(qaclickacademy.com)</span>
+                <span class="method-start">7 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">test.day3</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">login2(username1, password1)</span>
-                <span class="method-start">46 ms</span>
+                <span class="method-start">8 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">login2(username2, password2)</span>
-                <span class="method-start">47 ms</span>
+                <span class="method-start">9 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">login2(username3, password3)</span>
-                <span class="method-start">48 ms</span>
+                <span class="method-start">10 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">login3</span>
-                <span class="method-start">50 ms</span>
+                <span class="method-start">11 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

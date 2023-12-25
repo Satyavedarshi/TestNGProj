@@ -15,13 +15,15 @@ public class Listeners implements ITestListener{
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-		System.out.println("Listener-success message");
+		//System.out.println("Listener-success message");
+		System.out.println("Success method - "+result.getName());
 		ITestListener.super.onTestSuccess(result);
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
+		System.out.println("Failed method - "+result.getName());
 		ITestListener.super.onTestFailure(result);
 	}
 
